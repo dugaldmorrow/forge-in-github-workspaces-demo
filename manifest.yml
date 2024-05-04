@@ -1,0 +1,19 @@
+modules:
+  confluence:globalPage:
+    - key: forge-in-github-workspaces-demo-global-page
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: forge-in-github-workspaces-demo
+      route: hello-world
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  id: ari:cloud:ecosystem::app/a25202e2-3a9f-4ad1-920a-9a68d02ad474
+  runtime:
+    name: nodejs18.x
